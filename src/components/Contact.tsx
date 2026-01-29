@@ -22,7 +22,7 @@ const Contact = () => {
           {/* Contact cards */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <a
-              href="mailto:shivam.singh@example.com"
+              href="mailto:shivam01511@gmail.com"
               className="gradient-border card-glow p-6 flex items-center gap-4 group"
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -30,7 +30,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-semibold mb-1">Email</h4>
-                <p className="text-muted-foreground text-sm">shivam.singh@example.com</p>
+                <p className="text-muted-foreground text-sm">shivam01511@gmail.com</p>
               </div>
             </a>
 
