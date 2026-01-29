@@ -67,7 +67,7 @@ const Hero = () => {
               Download Resume
             </a>
             <a
-              href="https://linkedin.com/in/"
+              href="https://www.linkedin.com/in/leaderrr-shivam"
               className="btn-outline inline-flex items-center gap-2"
               target="_blank"
               rel="noopener noreferrer"
@@ -76,7 +76,7 @@ const Hero = () => {
               LinkedIn
             </a>
             <a
-              href="https://github.com/"
+              href="https://github.com/leaderrr-shivam"
               className="btn-outline inline-flex items-center gap-2"
               target="_blank"
               rel="noopener noreferrer"

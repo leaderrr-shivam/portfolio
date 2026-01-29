@@ -35,7 +35,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://linkedin.com/in/"
+              href="https://www.linkedin.com/in/leaderrr-shivam"
               target="_blank"
               rel="noopener noreferrer"
               className="gradient-border card-glow p-6 flex items-center gap-4 group"
@@ -50,7 +50,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://github.com/"
+              href="https://github.com/leaderrr-shivam"
               target="_blank"
               rel="noopener noreferrer"
               className="gradient-border card-glow p-6 flex items-center gap-4 group"
