@@ -58,10 +58,11 @@ const Hero = () => {
               <ArrowDown size={16} />
             </a>
             <a
-              href="#"
+              href="/Shivam_Singh_Resume_2026.pdf"
               className="btn-outline inline-flex items-center gap-2"
               target="_blank"
               rel="noopener noreferrer"
+              download
             >
               <FileText size={16} />
               Download Resume

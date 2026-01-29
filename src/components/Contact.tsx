@@ -65,7 +65,10 @@ const Contact = () => {
             </a>
 
             <a
-              href="#"
+              href="/Shivam_Singh_Resume_2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
               className="gradient-border card-glow p-6 flex items-center gap-4 group"
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
