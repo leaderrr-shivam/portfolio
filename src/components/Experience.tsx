@@ -1,4 +1,5 @@
-import { Building2, Users, CheckCircle2 } from 'lucide-react';
+import { Building2, Users, CheckCircle2, Award, ExternalLink } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const experienceData = [
   {
@@ -7,6 +8,7 @@ const experienceData = [
     period: 'Sep 2025 – Dec 2025',
     type: 'Remote Internship',
     project: 'Sentiment Detection System',
+    certificate: '/certificates/Shivam_Singh_TCS_iON_Sentiment_Analysis_Certificate.pdf',
     highlights: [
       'Built sentiment detection system for paragraph-level text analysis',
       'Automated sentiment prediction workflows for scalable processing',
@@ -19,6 +21,7 @@ const experienceData = [
     period: 'Mar 2025 – May 2025',
     type: 'Remote Internship',
     project: 'Automate Extraction of Handwritten Text from an Image',
+    certificate: '/certificates/Shivam_Singh_TCS_iON_Handwritten_Text_Certificate.pdf',
     highlights: [
       'Built end-to-end OCR pipeline for handwritten text extraction',
       'Tested AI workflows and documented system pipelines',
@@ -32,6 +35,7 @@ const experienceData = [
     period: 'Nov 2024 – Dec 2024',
     type: 'Remote Internship',
     project: 'DRSTIGYAN Image Classification Model',
+    certificate: '/certificates/Edunet_foundation_internship_certificate.pdf',
     highlights: [
       'Built custom CNN architecture for multi-class image classification',
       'Applied ML concepts in guided industry projects with mentorship',
@@ -125,6 +129,21 @@ const Experience = () => {
                         </li>
                       ))}
                     </ul>
+
+                    {exp.certificate && (
+                      <div className="mt-6 pt-5 border-t border-border/30">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="group/btn gap-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+                          onClick={() => window.open(exp.certificate, '_blank')}
+                        >
+                          <Award className="w-4 h-4 transition-transform duration-300 group-hover/btn:scale-110" />
+                          View Certificate
+                          <ExternalLink className="w-3 h-3 opacity-50 group-hover/btn:opacity-100 transition-opacity" />
+                        </Button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
