@@ -1,16 +1,19 @@
-import { Mail, Linkedin, Github, FileText, MapPin, Send } from 'lucide-react';
+import { Mail, Linkedin, Github, FileText, MapPin } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 relative">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-28 relative overflow-hidden">
+      {/* Background accent */}
+      <div className="absolute top-0 left-1/2 w-[600px] h-[300px] bg-primary/5 rounded-full blur-[120px] -translate-x-1/2" />
+      
+      <div className="container mx-auto px-6 relative">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
+            <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Get In Touch
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+            </span>
+            <h3 className="text-3xl md:text-5xl font-display font-bold mb-5">
               Let's Connect
             </h3>
             <p className="text-muted-foreground max-w-xl mx-auto">
@@ -23,13 +26,13 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <a
               href="mailto:shivam01511@gmail.com"
-              className="gradient-border card-glow p-6 flex items-center gap-4 group"
+              className="card-premium p-6 flex items-center gap-5 group"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Mail className="w-7 h-7 text-primary" />
+              <div className="icon-container w-16 h-16">
+                <Mail className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-110" />
               </div>
               <div>
-                <h4 className="font-semibold mb-1">Email</h4>
+                <h4 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors duration-300">Email</h4>
                 <p className="text-muted-foreground text-sm">shivam01511@gmail.com</p>
               </div>
             </a>
@@ -38,13 +41,13 @@ const Contact = () => {
               href="https://www.linkedin.com/in/leaderrr-shivam"
               target="_blank"
               rel="noopener noreferrer"
-              className="gradient-border card-glow p-6 flex items-center gap-4 group"
+              className="card-premium p-6 flex items-center gap-5 group"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Linkedin className="w-7 h-7 text-primary" />
+              <div className="icon-container w-16 h-16">
+                <Linkedin className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-110" />
               </div>
               <div>
-                <h4 className="font-semibold mb-1">LinkedIn</h4>
+                <h4 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors duration-300">LinkedIn</h4>
                 <p className="text-muted-foreground text-sm">Professional Network</p>
               </div>
             </a>
@@ -53,13 +56,13 @@ const Contact = () => {
               href="https://github.com/leaderrr-shivam"
               target="_blank"
               rel="noopener noreferrer"
-              className="gradient-border card-glow p-6 flex items-center gap-4 group"
+              className="card-premium p-6 flex items-center gap-5 group"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Github className="w-7 h-7 text-primary" />
+              <div className="icon-container w-16 h-16">
+                <Github className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-110" />
               </div>
               <div>
-                <h4 className="font-semibold mb-1">GitHub</h4>
+                <h4 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors duration-300">GitHub</h4>
                 <p className="text-muted-foreground text-sm">Code & Projects</p>
               </div>
             </a>
@@ -69,13 +72,13 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               download
-              className="gradient-border card-glow p-6 flex items-center gap-4 group"
+              className="card-premium p-6 flex items-center gap-5 group"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <FileText className="w-7 h-7 text-primary" />
+              <div className="icon-container w-16 h-16">
+                <FileText className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-110" />
               </div>
               <div>
-                <h4 className="font-semibold mb-1">Resume</h4>
+                <h4 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors duration-300">Resume</h4>
                 <p className="text-muted-foreground text-sm">Download PDF</p>
               </div>
             </a>
@@ -83,7 +86,7 @@ const Contact = () => {
 
           {/* Location */}
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full floating-badge">
               <MapPin className="w-4 h-4 text-primary" />
               <span className="text-sm text-muted-foreground">
                 Rewa, Madhya Pradesh, India · Remote-ready

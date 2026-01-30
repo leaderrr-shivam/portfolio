@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Cpu, Eye, Brain, MessageSquare } from 'lucide-react';
+import { Cpu, Eye, Brain, MessageSquare, Trophy } from 'lucide-react';
 
 const projectsData = [
   {
@@ -55,15 +55,19 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 bg-card/50 relative">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-28 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-card/50 via-transparent to-card/50" />
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px]" />
+      
+      <div className="container mx-auto px-6 relative">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
+            <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Technical Portfolio
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+            </span>
+            <h3 className="text-3xl md:text-5xl font-display font-bold mb-5">
               Projects
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -76,35 +80,36 @@ const Projects = () => {
             {projectsData.map((project, index) => (
               <div
                 key={project.title}
-                className={`gradient-border card-glow p-6 md:p-8 ${
+                className={`card-premium p-7 md:p-8 group ${
                   project.featured ? 'lg:col-span-2' : ''
                 }`}
               >
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <project.icon className="w-6 h-6 text-primary" />
+                <div className="flex items-start gap-5 mb-6">
+                  <div className="icon-container w-14 h-14 flex-shrink-0">
+                    <project.icon className="w-7 h-7 text-primary transition-transform duration-300 group-hover:scale-110" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-3 mb-2">
-                      <h4 className="text-xl font-bold">{project.title}</h4>
+                      <h4 className="text-xl font-bold group-hover:text-primary transition-colors duration-300">{project.title}</h4>
                       {project.achievement && (
-                        <span className="px-2 py-1 text-xs font-medium bg-primary/20 text-primary rounded-full">
-                          🏆 {project.achievement}
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-primary/15 text-primary rounded-full border border-primary/20">
+                          <Trophy size={12} />
+                          {project.achievement}
                         </span>
                       )}
                     </div>
-                    <p className="text-sm text-primary font-medium">{project.type}</p>
+                    <p className="text-sm text-primary/80 font-medium">{project.type}</p>
                   </div>
                 </div>
 
-                <p className="text-muted-foreground mb-6">{project.description}</p>
+                <p className="text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
 
                 {/* Highlights */}
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2.5 mb-6">
                   {project.highlights.map((highlight, hIndex) => (
-                    <li key={hIndex} className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{highlight}</span>
+                    <li key={hIndex} className="flex items-start gap-3 group/item">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 transition-transform duration-300 group-hover/item:scale-150" />
+                      <span className="text-sm text-muted-foreground leading-relaxed">{highlight}</span>
                     </li>
                   ))}
                 </ul>

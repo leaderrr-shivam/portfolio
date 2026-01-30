@@ -25,21 +25,24 @@ const highlights = [
 
 const About = () => {
   return (
-    <section id="about" className="py-24 relative">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-28 relative overflow-hidden">
+      {/* Background accent */}
+      <div className="absolute top-1/2 left-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px] -translate-y-1/2" />
+      
+      <div className="container mx-auto px-6 relative">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
+            <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Professional Summary
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">
-              Building Intelligent Systems
+            </span>
+            <h3 className="text-3xl md:text-5xl font-display font-bold mb-6">
+              Building <span className="text-gradient-warm">Intelligent</span> Systems
             </h3>
           </div>
 
           {/* Summary text */}
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-20">
             <p className="text-lg text-muted-foreground leading-relaxed">
               As an AI Engineer with a strong foundation in machine learning and data analytics, 
               I bring a research-oriented mindset combined with practical industry experience. 
@@ -47,7 +50,7 @@ const About = () => {
               and IIT Guwahati has equipped me with the technical rigor and professional 
               discipline required for enterprise AI development.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+            <p className="text-lg text-muted-foreground leading-relaxed mt-6">
               I specialize in developing end-to-end ML systems—from data preprocessing and 
               model architecture to deployment. My experience spans computer vision, 
               natural language processing, and the emerging field of autonomous AI agents. 
@@ -57,18 +60,18 @@ const About = () => {
           </div>
 
           {/* Highlights grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 perspective-1000">
             {highlights.map((item, index) => (
               <div
                 key={item.title}
-                className="gradient-border card-glow p-6"
+                className="card-premium p-6 group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-primary" />
+                <div className="icon-container w-14 h-14 mb-5">
+                  <item.icon className="w-7 h-7 text-primary transition-transform duration-300 group-hover:scale-110" />
                 </div>
-                <h4 className="font-semibold mb-2">{item.title}</h4>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+                <h4 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors duration-300">{item.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>

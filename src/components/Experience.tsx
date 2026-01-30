@@ -1,4 +1,4 @@
-import { Briefcase, Building2, Users, CheckCircle2 } from 'lucide-react';
+import { Building2, Users, CheckCircle2 } from 'lucide-react';
 
 const experienceData = [
   {
@@ -55,15 +55,18 @@ const experienceData = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 relative">
-      <div className="container mx-auto px-6">
+    <section id="experience" className="py-28 relative overflow-hidden">
+      {/* Background accent */}
+      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2" />
+      
+      <div className="container mx-auto px-6 relative">
         <div className="max-w-5xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
+            <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Professional Journey
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+            </span>
+            <h3 className="text-3xl md:text-5xl font-display font-bold mb-5">
               Experience
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -76,49 +79,49 @@ const Experience = () => {
             {experienceData.map((exp, index) => (
               <div
                 key={`${exp.company}-${exp.period}`}
-                className="gradient-border card-glow p-6 md:p-8"
+                className="card-premium p-7 md:p-8 group"
               >
                 <div className="flex flex-col md:flex-row md:items-start gap-6">
                   {/* Icon */}
                   <div className="flex-shrink-0">
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <div className="icon-container w-16 h-16">
                       {exp.type === 'Freelance' ? (
-                        <Users className="w-7 h-7 text-primary" />
+                        <Users className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-110" />
                       ) : (
-                        <Building2 className="w-7 h-7 text-primary" />
+                        <Building2 className="w-8 h-8 text-primary transition-transform duration-300 group-hover:scale-110" />
                       )}
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="flex-1">
-                    <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                    <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
                       <div>
-                        <h4 className="text-xl font-bold mb-1">{exp.role}</h4>
-                        <p className="text-primary font-medium">{exp.company}</p>
+                        <h4 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors duration-300">{exp.role}</h4>
+                        <p className="text-primary/90 font-medium">{exp.company}</p>
                       </div>
                       <div className="text-right">
-                        <span className="inline-block px-3 py-1 text-xs font-medium bg-secondary text-muted-foreground rounded-full mb-2">
+                        <span className="inline-block px-3 py-1.5 text-xs font-semibold bg-secondary text-muted-foreground rounded-full mb-2 border border-border/50">
                           {exp.type}
                         </span>
-                        <p className="text-sm text-muted-foreground font-mono">{exp.period}</p>
+                        <p className="text-sm text-muted-foreground/70 font-mono">{exp.period}</p>
                       </div>
                     </div>
 
                     {exp.project && (
-                      <div className="mb-4 p-3 bg-secondary/50 rounded-lg border border-border">
+                      <div className="mb-5 p-4 bg-secondary/50 rounded-xl border border-border/30 hover-lift">
                         <p className="text-sm">
                           <span className="text-muted-foreground">Project: </span>
-                          <span className="font-medium">{exp.project}</span>
+                          <span className="font-medium text-foreground">{exp.project}</span>
                         </p>
                       </div>
                     )}
 
-                    <ul className="space-y-2">
+                    <ul className="space-y-3">
                       {exp.highlights.map((highlight, hIndex) => (
-                        <li key={hIndex} className="flex items-start gap-3 text-muted-foreground">
-                          <CheckCircle2 className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                          <span className="text-sm">{highlight}</span>
+                        <li key={hIndex} className="flex items-start gap-3 text-muted-foreground group/item">
+                          <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0 transition-transform duration-300 group-hover/item:scale-110" />
+                          <span className="text-sm leading-relaxed">{highlight}</span>
                         </li>
                       ))}
                     </ul>
