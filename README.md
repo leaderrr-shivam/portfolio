@@ -62,7 +62,7 @@ Each project focuses on **end-to-end AI workflows**, including data preparation,
 
 ## 🌐 Portfolio & Professional Links
 
-- **Portfolio Website:** *(Hosted version linked in repository description)*  
+- **Portfolio Website:** https://leaderrr-shivam.github.io/portfolio/  
 - **LinkedIn:** https://www.linkedin.com/in/leaderrr-shivam  
 - **GitHub:** https://github.com/leaderrr-shivam  
 - **Email:** shivam01511@gmail.com  
