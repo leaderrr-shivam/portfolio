@@ -2,7 +2,7 @@ import { Github, Linkedin, FileText, ArrowDown, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Ambient background effects */}
       <div className="absolute inset-0 bg-background" />
       
