@@ -1,73 +1,88 @@
-# Welcome to your Lovable project
+# Shivam Singh — AI Engineer Portfolio
 
-## Project info
+This repository hosts the source and deployment assets for my professional portfolio website.  
+The portfolio is designed to present my background as an **AI Engineer**, highlighting industry-mentored internships, applied machine learning projects, research work, and technical competencies in a clear, recruiter-friendly manner.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 👤 About Me
 
-There are several ways of editing your application.
+I am an **AI Engineer and Data Analytics professional** with hands-on experience across **machine learning, NLP, computer vision, OCR systems, and autonomous agent research**.  
+My work spans **industry-backed remote internships**, academic research, and real-world AI problem solving, with a strong emphasis on structured workflows, documentation, and ethical AI practices.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🎓 Education
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Bachelor of Computer Applications (BCA) – Data Analytics (TCS iON Collaboration)**  
+  *Amity University Online* | CGPA: 8.31  
 
-**Use your preferred IDE**
+- **Credit-Linked Program in Artificial Intelligence & Machine Learning**  
+  *Daksh Gurukul, IIT Guwahati*
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 💼 Professional Experience
 
-Follow these steps:
+- **AI Intern – TCS iON (RIO Program, 210 Hours)**  
+  Built an end-to-end NLP-based sentiment analysis system with structured evaluation and documentation.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **AI Intern – TCS iON (RIO 125 Program)**  
+  Developed an automated handwritten text extraction system using OpenCV and Tesseract OCR.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **AI/ML Intern – Edunet Foundation (TechSaksham – Microsoft & SAP CSR)**  
+  Built a CNN-based image classification system (DRSTIGYAN) achieving 87% validation accuracy; invited for OpenCV Expo 2024 showcase.
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Computer Science Tutor (Freelance) – Course Hero**  
+  Provided remote academic and technical support to international learners through structured, chat-based problem solving.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 🧠 Technical Skills
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+**Programming:** Python, C, SQL  
+**Machine Learning & AI:** PyTorch, TensorFlow, Scikit-learn, CNNs, LLMs, OCR, NLP  
+**Data & Analytics:** Pandas, NumPy, Excel, SQL  
+**Tools & Platforms:** Git, Jupyter Notebook, Google Colab, Streamlit, Flask, MATLAB  
+**Concepts:** Model Evaluation, Error Analysis, Time Series, Reinforcement Learning, Ethical AI  
+**Big Data (Basic):** Apache Spark, Hadoop  
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📂 Projects Featured
 
-## What technologies are used for this project?
+- **Agentic AI: Exploring the Rise of Autonomous AI Agents**  
+- **Automated Handwritten Text Extraction System**
+- **Automate Detection of Different Sentiments from Paragraphs and Predict Overall Sentiment**  
+- **DRSTIGYAN – Image Classification Model**
 
-This project is built with:
+Each project focuses on **end-to-end AI workflows**, including data preparation, model development, evaluation, and technical documentation.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🌐 Portfolio & Professional Links
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+- **Portfolio Website:** *(Hosted version linked in repository description)*  
+- **LinkedIn:** https://www.linkedin.com/in/leaderrr-shivam  
+- **GitHub:** https://github.com/leaderrr-shivam  
+- **Email:** shivam01511@gmail.com  
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 📌 Purpose of This Repository
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This repository serves as:
+- A **single source of truth** for my professional portfolio  
+- A transparent showcase of my **AI engineering skills and project work**  
+- A reference point for **recruiters, hiring managers, and collaborators**
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## 📄 License
+
+This project is intended for **professional showcasing and evaluation purposes**.  
+Content may not be reused or redistributed without permission.
+
+---
+
+*Maintained by Shivam Singh*
