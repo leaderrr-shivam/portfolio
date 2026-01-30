@@ -5,7 +5,7 @@ const Contact = () => {
     <section id="contact" className="py-28 relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute top-0 left-1/2 w-[600px] h-[300px] bg-primary/5 rounded-full blur-[120px] -translate-x-1/2" />
-      
+
       <div className="container mx-auto px-6 relative">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
@@ -17,7 +17,7 @@ const Contact = () => {
               Let's Connect
             </h3>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Open to AI/ML opportunities, research collaborations, and challenging projects. 
+              Open to AI/ML opportunities, research collaborations, and challenging projects.
               Available for remote positions globally.
             </p>
           </div>
@@ -68,7 +68,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="/Shivam_Singh_Resume_2026.pdf"
+              href={`${import.meta.env.BASE_URL}Shivam_Singh_Resume_2026.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               download

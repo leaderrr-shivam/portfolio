@@ -8,7 +8,7 @@ const experienceData = [
     period: 'Sep 2025 – Dec 2025',
     type: 'Remote Internship',
     project: 'Sentiment Detection System',
-    certificate: '/certificates/Shivam_Singh_TCS_iON_Sentiment_Analysis_Certificate.pdf',
+    certificate: `${import.meta.env.BASE_URL}certificates/Shivam_Singh_TCS_iON_Sentiment_Analysis_Certificate.pdf`,
     highlights: [
       'Built sentiment detection system for paragraph-level text analysis',
       'Automated sentiment prediction workflows for scalable processing',
@@ -21,7 +21,7 @@ const experienceData = [
     period: 'Mar 2025 – May 2025',
     type: 'Remote Internship',
     project: 'Automate Extraction of Handwritten Text from an Image',
-    certificate: '/certificates/Shivam_Singh_TCS_iON_Handwritten_Text_Certificate.pdf',
+    certificate: `${import.meta.env.BASE_URL}certificates/Shivam_Singh_TCS_iON_Handwritten_Text_Certificate.pdf`,
     highlights: [
       'Built end-to-end OCR pipeline for handwritten text extraction',
       'Tested AI workflows and documented system pipelines',
@@ -35,7 +35,7 @@ const experienceData = [
     period: 'Nov 2024 – Dec 2024',
     type: 'Remote Internship',
     project: 'DRSTIGYAN Image Classification Model',
-    certificate: '/certificates/Edunet_foundation_internship_certificate.pdf',
+    certificate: `${import.meta.env.BASE_URL}certificates/Edunet_foundation_internship_certificate.pdf`,
     highlights: [
       'Built custom CNN architecture for multi-class image classification',
       'Applied ML concepts in guided industry projects with mentorship',
@@ -62,7 +62,7 @@ const Experience = () => {
     <section id="experience" className="py-28 relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2" />
-      
+
       <div className="container mx-auto px-6 relative">
         <div className="max-w-5xl mx-auto">
           {/* Section header */}

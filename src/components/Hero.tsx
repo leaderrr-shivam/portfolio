@@ -5,13 +5,13 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Ambient background effects */}
       <div className="absolute inset-0 bg-background" />
-      
+
       {/* Gradient orbs */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] animate-float" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] animate-float delay-300" />
-      
+
       {/* Subtle grid pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.015]"
         style={{
           backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
@@ -21,7 +21,7 @@ const Hero = () => {
       />
 
       {/* Hero glow */}
-      <div 
+      <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] pointer-events-none"
         style={{ background: 'var(--gradient-hero)' }}
       />
@@ -50,8 +50,8 @@ const Hero = () => {
 
           {/* Value statement */}
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed opacity-0 animate-fade-in-up delay-300">
-            AI-focused engineer with hands-on experience in machine learning, autonomous agents, 
-            OCR systems, and data analytics through industry-backed remote internships 
+            AI-focused engineer with hands-on experience in machine learning, autonomous agents,
+            OCR systems, and data analytics through industry-backed remote internships
             and research-driven projects.
           </p>
 
@@ -70,7 +70,7 @@ const Hero = () => {
               View Projects
             </a>
             <a
-              href="/Shivam_Singh_Resume_2026.pdf"
+              href={`${import.meta.env.BASE_URL}Shivam_Singh_Resume_2026.pdf`}
               className="btn-outline inline-flex items-center gap-2"
               target="_blank"
               rel="noopener noreferrer"
