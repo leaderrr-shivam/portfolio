@@ -1,4 +1,4 @@
-import { Award, ExternalLink, CheckCircle } from 'lucide-react';
+import { Award, CheckCircle } from 'lucide-react';
 
 const certifications = [
   {
@@ -48,15 +48,19 @@ const softSkills = [
 
 const Credentials = () => {
   return (
-    <section id="credentials" className="py-24 bg-card/50 relative">
-      <div className="container mx-auto px-6">
+    <section id="credentials" className="py-28 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-card/50 via-transparent to-card/50" />
+      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2" />
+      
+      <div className="container mx-auto px-6 relative">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
+            <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Verified Achievements
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+            </span>
+            <h3 className="text-3xl md:text-5xl font-display font-bold">
               Certifications & Credentials
             </h3>
           </div>
@@ -66,41 +70,41 @@ const Credentials = () => {
             {certifications.map((cert, index) => (
               <div
                 key={cert.title}
-                className="gradient-border card-glow p-6 flex items-start gap-4"
+                className="card-premium p-6 flex items-start gap-4 group"
               >
-                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center flex-shrink-0 text-2xl">
+                <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center flex-shrink-0 text-2xl transition-transform duration-300 group-hover:scale-110">
                   {cert.icon}
                 </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold mb-1">{cert.title}</h4>
+                <div className="flex-1 min-w-0">
+                  <h4 className="font-semibold mb-1 group-hover:text-primary transition-colors duration-300">{cert.title}</h4>
                   <p className="text-sm text-muted-foreground">{cert.issuer}</p>
                   {cert.hours && (
-                    <span className="inline-block mt-2 px-2 py-0.5 text-xs font-mono bg-primary/10 text-primary rounded">
+                    <span className="inline-block mt-2 px-2.5 py-1 text-xs font-mono bg-primary/10 text-primary rounded-md border border-primary/20">
                       {cert.hours}
                     </span>
                   )}
                 </div>
-                <Award className="w-5 h-5 text-primary flex-shrink-0" />
+                <Award className="w-5 h-5 text-primary/50 flex-shrink-0 transition-all duration-300 group-hover:text-primary group-hover:scale-110" />
               </div>
             ))}
           </div>
 
           {/* Soft Skills */}
-          <div className="gradient-border card-glow p-8">
-            <div className="text-center mb-8">
-              <h4 className="text-xl font-bold mb-2">Professional Competencies</h4>
+          <div className="card-premium p-8">
+            <div className="text-center mb-10">
+              <h4 className="text-xl font-display font-bold mb-3">Professional Competencies</h4>
               <p className="text-muted-foreground">
                 Core soft skills developed through remote-first work experience
               </p>
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-              {softSkills.map((skill) => (
+              {softSkills.map((skill, index) => (
                 <div
                   key={skill}
-                  className="flex items-center gap-3 p-3 bg-secondary/50 rounded-lg"
+                  className="flex items-center gap-3 p-4 bg-secondary/50 rounded-xl border border-border/30 hover-lift group"
                 >
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm font-medium">{skill}</span>
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
+                  <span className="text-sm font-medium group-hover:text-primary transition-colors duration-300">{skill}</span>
                 </div>
               ))}
             </div>

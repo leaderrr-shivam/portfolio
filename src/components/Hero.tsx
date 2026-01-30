@@ -1,61 +1,73 @@
-import { Github, Linkedin, FileText, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, FileText, ArrowDown, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
+      {/* Ambient background effects */}
+      <div className="absolute inset-0 bg-background" />
+      
+      {/* Gradient orbs */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] animate-float" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] animate-float delay-300" />
       
       {/* Subtle grid pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.015]"
         style={{
-          backgroundImage: `linear-gradient(hsl(var(--primary)) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px',
+          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
+                           linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
+          backgroundSize: '80px 80px',
         }}
       />
 
-      {/* Glow effect */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
+      {/* Hero glow */}
+      <div 
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] pointer-events-none"
+        style={{ background: 'var(--gradient-hero)' }}
+      />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Status badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 opacity-0 animate-fade-in-up">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-sm text-muted-foreground font-medium">
+          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full floating-badge mb-10 opacity-0 animate-fade-in-up">
+            <span className="relative w-2 h-2 rounded-full bg-emerald-500 status-dot" />
+            <span className="text-sm text-muted-foreground font-medium tracking-wide">
               Available for Opportunities
             </span>
           </div>
 
-          {/* Name */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 opacity-0 animate-fade-in-up delay-100">
-            <span className="text-gradient">Shivam Singh</span>
+          {/* Name with display font */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 opacity-0 animate-fade-in-up delay-100">
+            <span className="text-gradient font-display tracking-tight">Shivam Singh</span>
           </h1>
 
-          {/* Title */}
-          <h2 className="text-xl md:text-2xl font-medium text-muted-foreground mb-6 opacity-0 animate-fade-in-up delay-200">
-            <span className="text-primary">AI Engineer</span> | Machine Learning & Data Analytics Professional
+          {/* Title with warm gradient */}
+          <h2 className="text-xl md:text-2xl font-medium text-muted-foreground mb-8 opacity-0 animate-fade-in-up delay-200">
+            <span className="text-gradient-warm font-semibold">AI Engineer</span>
+            <span className="mx-3 text-border">|</span>
+            Machine Learning & Data Analytics Professional
           </h2>
 
           {/* Value statement */}
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed opacity-0 animate-fade-in-up delay-300">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed opacity-0 animate-fade-in-up delay-300">
             AI-focused engineer with hands-on experience in machine learning, autonomous agents, 
             OCR systems, and data analytics through industry-backed remote internships 
             and research-driven projects.
           </p>
 
           {/* Location */}
-          <p className="text-sm text-muted-foreground mb-10 opacity-0 animate-fade-in-up delay-300">
-            <span className="mono">📍</span> Rewa, Madhya Pradesh, India · Remote-ready
+          <p className="text-sm text-muted-foreground/70 mb-12 opacity-0 animate-fade-in-up delay-300 flex items-center justify-center gap-2">
+            <span className="text-primary">📍</span>
+            <span className="mono">Rewa, Madhya Pradesh, India</span>
+            <span className="text-border">·</span>
+            <span>Remote-ready</span>
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-16 opacity-0 animate-fade-in-up delay-400">
-            <a href="#projects" className="btn-primary inline-flex items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-20 opacity-0 animate-fade-in-up delay-400">
+            <a href="#projects" className="btn-primary inline-flex items-center gap-2 group">
+              <Sparkles size={16} className="group-hover:animate-pulse" />
               View Projects
-              <ArrowDown size={16} />
             </a>
             <a
               href="/Shivam_Singh_Resume_2026.pdf"
@@ -91,10 +103,12 @@ const Hero = () => {
           <div className="opacity-0 animate-fade-in delay-500">
             <a
               href="#about"
-              className="inline-flex flex-col items-center text-muted-foreground hover:text-primary transition-colors"
+              className="inline-flex flex-col items-center text-muted-foreground/60 hover:text-primary transition-colors duration-300 group"
             >
-              <span className="text-xs mb-2 tracking-wider uppercase">Scroll to explore</span>
-              <ArrowDown size={20} className="animate-bounce" />
+              <span className="text-xs mb-3 tracking-[0.2em] uppercase font-medium">Scroll to explore</span>
+              <div className="w-6 h-10 rounded-full border-2 border-current flex items-start justify-center p-1.5 group-hover:border-primary transition-colors">
+                <div className="w-1 h-2 rounded-full bg-current animate-bounce" />
+              </div>
             </a>
           </div>
         </div>

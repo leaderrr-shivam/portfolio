@@ -22,15 +22,18 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section id="education" className="py-24 bg-card/50 relative">
-      <div className="container mx-auto px-6">
+    <section id="education" className="py-28 relative overflow-hidden">
+      {/* Background accent */}
+      <div className="absolute inset-0 bg-gradient-to-b from-card/50 via-transparent to-card/50" />
+      
+      <div className="container mx-auto px-6 relative">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
+            <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Academic Background
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-bold">
+            </span>
+            <h3 className="text-3xl md:text-5xl font-display font-bold">
               Education
             </h3>
           </div>
@@ -38,43 +41,45 @@ const Education = () => {
           {/* Timeline */}
           <div className="relative">
             {educationData.map((edu, index) => (
-              <div key={edu.degree} className="relative pl-10 pb-12 last:pb-0">
+              <div key={edu.degree} className="relative pl-12 pb-14 last:pb-0">
                 {/* Timeline line */}
                 {index < educationData.length - 1 && (
                   <div className="timeline-line" />
                 )}
                 
                 {/* Timeline dot */}
-                <div className="absolute left-0 top-1">
+                <div className="absolute left-0 top-2">
                   <div className={`timeline-dot ${edu.current ? 'animate-pulse-glow' : ''}`} />
                 </div>
 
                 {/* Content card */}
-                <div className="gradient-border card-glow p-6">
-                  <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                <div className="card-premium p-7 group">
+                  <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
                     <div>
-                      <div className="flex items-center gap-2 mb-1">
-                        <GraduationCap className="w-5 h-5 text-primary" />
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="icon-container w-10 h-10">
+                          <GraduationCap className="w-5 h-5 text-primary" />
+                        </div>
                         <h4 className="font-bold text-lg">{edu.degree}</h4>
                         {edu.current && (
-                          <span className="px-2 py-0.5 text-xs font-medium bg-primary/20 text-primary rounded-full">
+                          <span className="px-3 py-1 text-xs font-semibold bg-primary/15 text-primary rounded-full border border-primary/20">
                             In Progress
                           </span>
                         )}
                       </div>
-                      <p className="text-primary font-medium">{edu.specialization}</p>
+                      <p className="text-primary font-medium ml-13">{edu.specialization}</p>
                     </div>
                     {edu.cgpa && (
-                      <div className="flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-lg">
+                      <div className="flex items-center gap-2 px-4 py-2 bg-secondary/80 rounded-lg border border-border/50 hover-lift">
                         <Award className="w-4 h-4 text-primary" />
-                        <span className="font-mono font-semibold">CGPA: {edu.cgpa}</span>
+                        <span className="font-mono font-semibold text-sm">CGPA: {edu.cgpa}</span>
                       </div>
                     )}
                   </div>
                   
-                  <p className="text-muted-foreground mb-2">{edu.institution}</p>
-                  <p className="text-sm text-muted-foreground mb-3 font-mono">{edu.period}</p>
-                  <p className="text-sm text-muted-foreground">{edu.description}</p>
+                  <p className="text-muted-foreground mb-2 ml-13">{edu.institution}</p>
+                  <p className="text-sm text-muted-foreground/70 mb-4 font-mono ml-13">{edu.period}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed ml-13">{edu.description}</p>
                 </div>
               </div>
             ))}
