@@ -25,6 +25,7 @@ const getEventIcon = (type: string) => {
 const getEventDescription = (event: GitHubEvent) => {
   switch (event.type) {
     case 'PushEvent':
+      console.log('PushEvent full payload:', JSON.stringify(event.payload));
       const commits = event.payload.size || event.payload.distinct_size || event.payload.commits?.length || 0;
       return `Pushed ${commits} commit${commits !== 1 ? 's' : ''} to`;
     case 'PullRequestEvent':
