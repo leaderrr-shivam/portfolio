@@ -10,6 +10,23 @@ interface GitHubEvent {
   payload: any;
 }
 
+const getEventLink = (event: GitHubEvent) => {
+  const repoUrl = `https://github.com/${event.repo.name}`;
+  switch (event.type) {
+    case 'PushEvent':
+      const head = event.payload.head;
+      return head ? `${repoUrl}/commit/${head}` : `${repoUrl}/commits`;
+    case 'PullRequestEvent':
+      return event.payload.pull_request?.html_url || repoUrl;
+    case 'IssuesEvent':
+      return event.payload.issue?.html_url || repoUrl;
+    case 'ForkEvent':
+      return event.payload.forkee?.html_url || repoUrl;
+    default:
+      return repoUrl;
+  }
+};
+
 const GITHUB_USERNAME = 'leaderrr-shivam';
 
 const getEventIcon = (type: string) => {
@@ -154,7 +171,7 @@ const GitHubActivity = () => {
                           <p className="text-sm">
                             <span className="text-muted-foreground">{getEventDescription(event)}</span>{' '}
                             <a
-                              href={`https://github.com/${event.repo.name}`}
+                              href={getEventLink(event)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="font-medium text-foreground hover:text-primary transition-colors"
