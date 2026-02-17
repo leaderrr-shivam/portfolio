@@ -15,6 +15,7 @@ import BusinessCard from '@/components/BusinessCard';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
+import ScrollProgress from '@/components/ScrollProgress';
 import PageLoader from '@/components/PageLoader';
 
 const Index = () => {
@@ -26,6 +27,7 @@ const Index = () => {
       {!loaded && <PageLoader onComplete={handleLoaded} />}
       <div className={`min-h-screen bg-background overflow-x-hidden transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
         <Navigation />
+        <ScrollProgress />
         <main>
           <Hero />
           <About />
