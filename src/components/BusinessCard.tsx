@@ -56,6 +56,7 @@ const BusinessCard = () => {
                 className="absolute inset-0 rounded-2xl p-7 flex flex-col justify-between overflow-hidden border border-border/30"
                 style={{
                   backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
                   background: 'var(--gradient-card)',
                   boxShadow: 'var(--shadow-elevated), var(--shadow-glow)',
                 }}
@@ -71,10 +72,11 @@ const BusinessCard = () => {
                     </h4>
                     <p className="text-xs text-primary font-medium tracking-wide mt-1">AI Engineer</p>
                   </div>
-                  <img
+                    <img
                     src="/favicon.ico"
                     alt="Logo"
-                    className="w-10 h-10 rounded-lg opacity-80"
+                    className="w-10 h-10 rounded-lg"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
                   />
                 </div>
 
@@ -95,6 +97,7 @@ const BusinessCard = () => {
                 className="absolute inset-0 rounded-2xl p-7 flex flex-col justify-between overflow-hidden border border-border/30"
                 style={{
                   backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
                   transform: 'rotateY(180deg)',
                   background: 'var(--gradient-card)',
                   boxShadow: 'var(--shadow-elevated), var(--shadow-glow)',
