@@ -12,6 +12,7 @@ TITLE:AI Engineer
 EMAIL;TYPE=INTERNET:shivam01511@gmail.com
 URL:https://github.com/leaderrr-shivam
 URL:https://www.linkedin.com/in/leaderrr-shivam
+URL:https://leaderrr-shivam.github.io/portfolio/
 ADR;TYPE=HOME:;;Rewa;Madhya Pradesh;;India
 NOTE:AI Engineer specializing in Machine Learning, Deep Learning, NLP, and OCR systems.
 END:VCARD`;
@@ -121,6 +122,10 @@ const BusinessCard = () => {
                   <a href="https://github.com/leaderrr-shivam" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                     <Github size={14} className="text-primary" />
                     github.com/leaderrr-shivam
+                  </a>
+                  <a href="https://leaderrr-shivam.github.io/portfolio/" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                    <Globe size={14} className="text-primary" />
+                    leaderrr-shivam.github.io/portfolio
                   </a>
                 </div>
 
