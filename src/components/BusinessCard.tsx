@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Download, Mail, Linkedin, Github, MapPin, Globe } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import businessLogo from '@/assets/Business_S_logo.png';
+
 
 const generateVCard = () => {
   const vcard = `BEGIN:VCARD
@@ -72,25 +72,20 @@ const BusinessCard = () => {
 
                 <div className="flex items-start justify-between relative z-10">
                   <div>
-                    <h4 className="text-xl font-display font-bold">
+                    <h4 className="text-2xl md:text-3xl font-display font-bold">
                       <span className="text-gradient-warm">S</span>hivam Singh
                     </h4>
-                    <p className="text-xs text-primary font-medium tracking-wide mt-1">AI Engineer</p>
+                    <p className="text-sm text-primary font-semibold tracking-wide mt-1.5">AI Engineer</p>
                   </div>
-                  <img
-                    src={businessLogo}
-                    alt="Logo"
-                    className="w-10 h-10 rounded-lg"
-                  />
                 </div>
 
-                <div className="flex items-center gap-4 relative z-10">
-                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                    <MapPin size={10} className="text-primary" />
+                <div className="flex items-center gap-5 relative z-10">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <MapPin size={13} className="text-primary" />
                     <span>Rewa, MP, India</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                    <Globe size={10} className="text-primary" />
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Globe size={13} className="text-primary" />
                     <span>Remote-ready</span>
                   </div>
                 </div>
