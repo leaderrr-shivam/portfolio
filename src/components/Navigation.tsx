@@ -61,10 +61,13 @@ const Navigation = () => {
       >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16">
-            <a href="#" className="font-display font-bold text-xl tracking-tight group relative z-10">
+            <button
+              onClick={() => { if (location.pathname === '/') { window.scrollTo({ top: 0, behavior: 'smooth' }); } else { navigate('/'); } }}
+              className="font-display font-bold text-xl tracking-tight group relative z-10 bg-transparent border-none cursor-pointer"
+            >
               <span className="text-gradient-warm group-hover:opacity-80 transition-opacity">S</span>
               <span className="text-foreground">hivam</span>
-            </a>
+            </button>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-10">
