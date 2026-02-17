@@ -190,7 +190,7 @@ const BlogPost = () => {
             {/* Back link */}
             <button
               onClick={goBackToBlog}
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8 w-fit"
             >
               <ArrowLeft size={16} />
               Back to portfolio
