@@ -60,13 +60,17 @@ const GitHubActivity = () => {
   const sectionRef = useScrollReveal();
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/${GITHUB_USERNAME}/events/public?per_page=8`)
+    fetch(`https://api.github.com/users/${GITHUB_USERNAME}/events/public?per_page=30`)
       .then((res) => {
         if (!res.ok) throw new Error();
         return res.json();
       })
       .then((data) => {
-        setEvents(data.slice(0, 6));
+        if (!Array.isArray(data)) throw new Error();
+        const myEvents = data.filter(
+          (e: any) => e.actor?.login?.toLowerCase() === GITHUB_USERNAME.toLowerCase()
+        );
+        setEvents(myEvents.slice(0, 3));
         setLoading(false);
       })
       .catch(() => {
