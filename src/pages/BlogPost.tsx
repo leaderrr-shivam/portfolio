@@ -1,6 +1,6 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Calendar, Clock, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
@@ -180,16 +180,16 @@ const BlogPost = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             {/* Back link */}
-            <Link
-              to="/#blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10"
+            <a
+              href="/#blog"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-6"
             >
               <ArrowLeft size={16} />
               Back to portfolio
-            </Link>
+            </a>
 
             {/* Series & Meta */}
-            <span className="inline-block px-3 py-1 text-[0.65rem] font-semibold text-primary uppercase tracking-[0.15em] bg-primary/10 rounded-full mb-4 mono">
+            <span className="inline-block px-3 py-1 text-[0.65rem] font-semibold text-primary uppercase tracking-[0.15em] bg-primary/10 rounded-full mb-4 mono mt-2">
               {blogPost.series}
             </span>
 
@@ -227,13 +227,13 @@ const BlogPost = () => {
               <p className="text-xs text-muted-foreground/50 italic max-w-xl">
                 Intelligence Shifts is a long-term body of work analyzing AI as structural inflection points — written for builders who want to understand what's actually changing.
               </p>
-              <Link
-                to="/#blog"
+              <a
+                href="/#blog"
                 className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors mt-6"
               >
                 <ArrowLeft size={16} />
                 Back to portfolio
-              </Link>
+              </a>
             </div>
           </div>
         </div>
