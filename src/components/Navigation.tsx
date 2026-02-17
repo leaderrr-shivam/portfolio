@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const navItems = [
   { label: 'About', href: '#about' },
@@ -63,14 +64,17 @@ const Navigation = () => {
               ))}
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-all duration-300 relative z-10"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
-            </button>
+            {/* Theme Toggle & Mobile Menu Button */}
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <button
+                className="md:hidden p-2.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-all duration-300 relative z-10"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              </button>
+            </div>
           </div>
         </div>
       </nav>

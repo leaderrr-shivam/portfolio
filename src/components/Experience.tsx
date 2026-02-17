@@ -1,5 +1,6 @@
 import { Building2, Users, CheckCircle2, Award, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const experienceData = [
   {
@@ -58,14 +59,14 @@ const experienceData = [
 ];
 
 const Experience = () => {
+  const sectionRef = useScrollReveal();
+
   return (
     <section id="experience" className="py-28 relative overflow-hidden">
-      {/* Background accent */}
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2" />
 
-      <div className="container mx-auto px-6 relative">
+      <div className="container mx-auto px-6 relative" ref={sectionRef}>
         <div className="max-w-5xl mx-auto">
-          {/* Section header */}
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Professional Journey
@@ -78,7 +79,6 @@ const Experience = () => {
             </p>
           </div>
 
-          {/* Experience cards */}
           <div className="space-y-6">
             {experienceData.map((exp, index) => (
               <div
@@ -86,7 +86,6 @@ const Experience = () => {
                 className="card-premium p-7 md:p-8 group"
               >
                 <div className="flex flex-col md:flex-row md:items-start gap-6">
-                  {/* Icon */}
                   <div className="flex-shrink-0">
                     <div className="icon-container w-16 h-16">
                       {exp.type === 'Freelance' ? (
@@ -96,8 +95,6 @@ const Experience = () => {
                       )}
                     </div>
                   </div>
-
-                  {/* Content */}
                   <div className="flex-1">
                     <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
                       <div>
@@ -111,7 +108,6 @@ const Experience = () => {
                         <p className="text-sm text-muted-foreground/70 font-mono">{exp.period}</p>
                       </div>
                     </div>
-
                     {exp.project && (
                       <div className="mb-5 p-4 bg-secondary/50 rounded-xl border border-border/30 hover-lift">
                         <p className="text-sm">
@@ -120,7 +116,6 @@ const Experience = () => {
                         </p>
                       </div>
                     )}
-
                     <ul className="space-y-3">
                       {exp.highlights.map((highlight, hIndex) => (
                         <li key={hIndex} className="flex items-start gap-3 text-muted-foreground group/item">
@@ -129,7 +124,6 @@ const Experience = () => {
                         </li>
                       ))}
                     </ul>
-
                     {exp.certificate && (
                       <div className="mt-6 pt-5 border-t border-border/30">
                         <Button
