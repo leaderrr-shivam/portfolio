@@ -3,13 +3,13 @@ import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 const navItems = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Credentials', href: '#credentials' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', href: '/#about' },
+  { label: 'Experience', href: '/#experience' },
+  { label: 'Projects', href: '/#projects' },
+  { label: 'Skills', href: '/#skills' },
+  { label: 'Credentials', href: '/#credentials' },
+  { label: 'Blog', href: '/#blog' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 const Navigation = () => {
