@@ -10,9 +10,8 @@ FN:Shivam Singh
 N:Singh;Shivam;;;
 TITLE:AI Engineer
 EMAIL;TYPE=INTERNET:shivam01511@gmail.com
-URL:https://shivamaiportfolio.lovable.app
 URL:https://github.com/leaderrr-shivam
-URL:https://www.linkedin.com/in/leaderrr-shivam
+URL;TYPE=HOME:https://shivamaiportfolio.lovable.app
 ADR;TYPE=HOME:;;Rewa;Madhya Pradesh;;India
 NOTE:AI Engineer specializing in Machine Learning, Deep Learning, NLP, and OCR systems.
 END:VCARD`;
