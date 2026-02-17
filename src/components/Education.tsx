@@ -1,4 +1,5 @@
 import { GraduationCap, Award } from 'lucide-react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const educationData = [
   {
@@ -21,14 +22,14 @@ const educationData = [
 ];
 
 const Education = () => {
+  const sectionRef = useScrollReveal();
+
   return (
     <section id="education" className="py-28 relative overflow-hidden">
-      {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-card/50 via-transparent to-card/50" />
 
-      <div className="container mx-auto px-6 relative">
+      <div className="container mx-auto px-6 relative" ref={sectionRef}>
         <div className="max-w-4xl mx-auto">
-          {/* Section header */}
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Academic Background
@@ -38,21 +39,15 @@ const Education = () => {
             </h3>
           </div>
 
-          {/* Timeline */}
           <div className="relative">
             {educationData.map((edu, index) => (
               <div key={edu.degree} className="relative pl-12 pb-14 last:pb-0">
-                {/* Timeline line */}
                 {index < educationData.length - 1 && (
                   <div className="timeline-line" />
                 )}
-
-                {/* Timeline dot */}
                 <div className="absolute left-0 top-2">
                   <div className={`timeline-dot ${edu.current ? 'animate-pulse-glow' : ''}`} />
                 </div>
-
-                {/* Content card */}
                 <div className="card-premium p-7 group">
                   <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
                     <div>
@@ -76,7 +71,6 @@ const Education = () => {
                       </div>
                     )}
                   </div>
-
                   <p className="text-muted-foreground mb-2 ml-13">{edu.institution}</p>
                   <p className="text-sm text-muted-foreground/70 mb-4 font-mono ml-13">{edu.period}</p>
                   <p className="text-sm text-muted-foreground leading-relaxed ml-13">{edu.description}</p>

@@ -1,4 +1,5 @@
 import { Cpu, Eye, Brain, MessageSquare, Trophy } from 'lucide-react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const projectsData = [
   {
@@ -54,15 +55,15 @@ const projectsData = [
 ];
 
 const Projects = () => {
+  const sectionRef = useScrollReveal();
+
   return (
     <section id="projects" className="py-28 relative overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-card/50 via-transparent to-card/50" />
       <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px]" />
       
-      <div className="container mx-auto px-6 relative">
+      <div className="container mx-auto px-6 relative" ref={sectionRef}>
         <div className="max-w-6xl mx-auto">
-          {/* Section header */}
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Technical Portfolio
@@ -75,14 +76,11 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* Projects grid */}
           <div className="grid lg:grid-cols-2 gap-6">
             {projectsData.map((project, index) => (
               <div
                 key={project.title}
-                className={`card-premium p-7 md:p-8 group ${
-                  project.featured ? 'lg:col-span-2' : ''
-                }`}
+                className={`card-premium p-7 md:p-8 group ${project.featured ? 'lg:col-span-2' : ''}`}
               >
                 <div className="flex items-start gap-5 mb-6">
                   <div className="icon-container w-14 h-14 flex-shrink-0">
@@ -101,10 +99,7 @@ const Projects = () => {
                     <p className="text-sm text-primary/80 font-medium">{project.type}</p>
                   </div>
                 </div>
-
                 <p className="text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
-
-                {/* Highlights */}
                 <ul className="space-y-2.5 mb-6">
                   {project.highlights.map((highlight, hIndex) => (
                     <li key={hIndex} className="flex items-start gap-3 group/item">
@@ -113,13 +108,9 @@ const Projects = () => {
                     </li>
                   ))}
                 </ul>
-
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span key={tech} className="tech-tag">
-                      {tech}
-                    </span>
+                    <span key={tech} className="tech-tag">{tech}</span>
                   ))}
                 </div>
               </div>

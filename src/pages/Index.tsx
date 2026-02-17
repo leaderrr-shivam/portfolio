@@ -8,6 +8,7 @@ import Skills from '@/components/Skills';
 import Credentials from '@/components/Credentials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import GitHubActivity from '@/components/GitHubActivity';
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
         <Projects />
         <Skills />
         <Credentials />
+        <GitHubActivity />
         <Contact />
       </main>
       <Footer />

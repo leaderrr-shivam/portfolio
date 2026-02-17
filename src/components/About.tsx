@@ -1,4 +1,5 @@
 import { Brain, Code, Users, FileCheck } from 'lucide-react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const highlights = [
   {
@@ -24,12 +25,14 @@ const highlights = [
 ];
 
 const About = () => {
+  const sectionRef = useScrollReveal();
+
   return (
     <section id="about" className="py-28 relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute top-1/2 left-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px] -translate-y-1/2" />
       
-      <div className="container mx-auto px-6 relative">
+      <div className="container mx-auto px-6 relative" ref={sectionRef}>
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
