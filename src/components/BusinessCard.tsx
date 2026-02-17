@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Download, Mail, Linkedin, Github, MapPin, Globe, X } from 'lucide-react';
+import { Download, Mail, Linkedin, Github, MapPin, Globe } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import faviconImg from '/favicon.ico';
 
 const generateVCard = () => {
   const vcard = `BEGIN:VCARD
@@ -43,13 +44,16 @@ const BusinessCard = () => {
 
           {/* 3D Flip Card */}
           <div
-            className="perspective-1000 cursor-pointer mx-auto"
-            style={{ maxWidth: '420px', aspectRatio: '1.75/1' }}
+            className="cursor-pointer mx-auto"
+            style={{ maxWidth: '420px', aspectRatio: '1.75/1', perspective: '1000px' }}
             onClick={() => setFlipped(!flipped)}
           >
             <div
-              className="relative w-full h-full transition-transform duration-700 preserve-3d"
-              style={{ transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
+              className="relative w-full h-full transition-transform duration-700"
+              style={{
+                transformStyle: 'preserve-3d',
+                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+              }}
             >
               {/* Front */}
               <div
@@ -57,6 +61,7 @@ const BusinessCard = () => {
                 style={{
                   backfaceVisibility: 'hidden',
                   WebkitBackfaceVisibility: 'hidden',
+                  zIndex: flipped ? 0 : 1,
                   background: 'var(--gradient-card)',
                   boxShadow: 'var(--shadow-elevated), var(--shadow-glow)',
                 }}
@@ -72,11 +77,10 @@ const BusinessCard = () => {
                     </h4>
                     <p className="text-xs text-primary font-medium tracking-wide mt-1">AI Engineer</p>
                   </div>
-                    <img
-                    src="/favicon.ico"
+                  <img
+                    src={faviconImg}
                     alt="Logo"
                     className="w-10 h-10 rounded-lg"
-                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
                   />
                 </div>
 
@@ -99,6 +103,7 @@ const BusinessCard = () => {
                   backfaceVisibility: 'hidden',
                   WebkitBackfaceVisibility: 'hidden',
                   transform: 'rotateY(180deg)',
+                  zIndex: flipped ? 1 : 0,
                   background: 'var(--gradient-card)',
                   boxShadow: 'var(--shadow-elevated), var(--shadow-glow)',
                 }}
@@ -106,15 +111,15 @@ const BusinessCard = () => {
                 <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'var(--gradient-primary)' }} />
 
                 <div className="space-y-3 relative z-10 pt-2">
-                  <a href="mailto:shivam01511@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <a href="mailto:shivam01511@gmail.com" onClick={(e) => e.stopPropagation()} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                     <Mail size={14} className="text-primary" />
                     shivam01511@gmail.com
                   </a>
-                  <a href="https://www.linkedin.com/in/leaderrr-shivam" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <a href="https://www.linkedin.com/in/leaderrr-shivam" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                     <Linkedin size={14} className="text-primary" />
                     linkedin.com/in/leaderrr-shivam
                   </a>
-                  <a href="https://github.com/leaderrr-shivam" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <a href="https://github.com/leaderrr-shivam" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                     <Github size={14} className="text-primary" />
                     github.com/leaderrr-shivam
                   </a>
