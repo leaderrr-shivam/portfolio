@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Download, Mail, Linkedin, Github, MapPin, Globe } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import faviconImg from '/favicon.ico';
+import businessLogo from '@/assets/Business_S_logo.png';
 
 const generateVCard = () => {
   const vcard = `BEGIN:VCARD
@@ -78,7 +78,7 @@ const BusinessCard = () => {
                     <p className="text-xs text-primary font-medium tracking-wide mt-1">AI Engineer</p>
                   </div>
                   <img
-                    src={faviconImg}
+                    src={businessLogo}
                     alt="Logo"
                     className="w-10 h-10 rounded-lg"
                   />
