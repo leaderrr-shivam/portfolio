@@ -1,6 +1,9 @@
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /
+
 User-agent: Bingbot
 Allow: /
 
@@ -13,4 +16,5 @@ Allow: /
 User-agent: *
 Allow: /
 
+Host: https://leaderrr-shivam.github.io/portfolio/
 Sitemap: https://leaderrr-shivam.github.io/portfolio/sitemap.xml
