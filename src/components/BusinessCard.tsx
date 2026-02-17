@@ -11,7 +11,7 @@ N:Singh;Shivam;;;
 TITLE:AI Engineer
 EMAIL;TYPE=INTERNET:shivam01511@gmail.com
 URL:https://github.com/leaderrr-shivam
-URL;TYPE=HOME:https://shivamaiportfolio.lovable.app
+URL:https://www.linkedin.com/in/leaderrr-shivam
 ADR;TYPE=HOME:;;Rewa;Madhya Pradesh;;India
 NOTE:AI Engineer specializing in Machine Learning, Deep Learning, NLP, and OCR systems.
 END:VCARD`;
