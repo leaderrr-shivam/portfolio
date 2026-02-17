@@ -1,20 +1,34 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 
 const navItems = [
-  { label: 'About', href: '/#about' },
-  { label: 'Experience', href: '/#experience' },
-  { label: 'Projects', href: '/#projects' },
-  { label: 'Skills', href: '/#skills' },
-  { label: 'Credentials', href: '/#credentials' },
-  { label: 'Blog', href: '/#blog' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'About', id: 'about' },
+  { label: 'Experience', id: 'experience' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Skills', id: 'skills' },
+  { label: 'Credentials', id: 'credentials' },
+  { label: 'Blog', id: 'blog' },
+  { label: 'Contact', id: 'contact' },
 ];
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavClick = useCallback((id: string) => {
+    if (location.pathname === '/') {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, [location.pathname, navigate]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,13 +69,13 @@ const Navigation = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-10">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="nav-link text-sm font-medium tracking-wide"
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item.id)}
+                  className="nav-link text-sm font-medium tracking-wide bg-transparent border-none cursor-pointer"
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
             </div>
 
@@ -103,11 +117,10 @@ const Navigation = () => {
           <div className="container mx-auto px-6 py-4">
             <div className="flex flex-col gap-1">
               {navItems.map((item, index) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-foreground hover:text-primary hover:bg-primary/5 transition-all duration-300 py-3.5 px-4 rounded-xl font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                <button
+                  key={item.id}
+                  onClick={() => { handleNavClick(item.id); setIsMobileMenuOpen(false); }}
+                  className="text-left text-foreground hover:text-primary hover:bg-primary/5 transition-all duration-300 py-3.5 px-4 rounded-xl font-medium bg-transparent border-none cursor-pointer"
                   style={{ 
                     animationDelay: `${index * 50}ms`,
                     opacity: isMobileMenuOpen ? 1 : 0,
@@ -116,7 +129,7 @@ const Navigation = () => {
                   }}
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
             </div>
           </div>
