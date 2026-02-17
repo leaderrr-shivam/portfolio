@@ -1,6 +1,6 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Calendar, Clock, ArrowLeft } from 'lucide-react';
-
+import { useNavigate } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
@@ -171,6 +171,14 @@ const renderMarkdown = (md: string) => {
 
 const BlogPost = () => {
   const sectionRef = useScrollReveal();
+  const navigate = useNavigate();
+
+  const goBackToBlog = () => {
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -180,16 +188,16 @@ const BlogPost = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             {/* Back link */}
-            <a
-              href="/#blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-6"
+            <button
+              onClick={goBackToBlog}
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft size={16} />
               Back to portfolio
-            </a>
+            </button>
 
             {/* Series & Meta */}
-            <span className="inline-block px-3 py-1 text-[0.65rem] font-semibold text-primary uppercase tracking-[0.15em] bg-primary/10 rounded-full mb-4 mono mt-2">
+            <span className="inline-block px-3 py-1 text-[0.65rem] font-semibold text-primary uppercase tracking-[0.15em] bg-primary/10 rounded-full mb-4 mono">
               {blogPost.series}
             </span>
 
@@ -227,13 +235,13 @@ const BlogPost = () => {
               <p className="text-xs text-muted-foreground/50 italic max-w-xl">
                 Intelligence Shifts is a long-term body of work analyzing AI as structural inflection points — written for builders who want to understand what's actually changing.
               </p>
-              <a
-                href="/#blog"
+              <button
+                onClick={goBackToBlog}
                 className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors mt-6"
               >
                 <ArrowLeft size={16} />
                 Back to portfolio
-              </a>
+              </button>
             </div>
           </div>
         </div>
