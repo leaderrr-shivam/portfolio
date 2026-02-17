@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { Download, Mail, Linkedin, Github, MapPin, Globe } from 'lucide-react';
-import { useScrollReveal } from '@/hooks/useScrollReveal';
-import faviconImg from '/favicon.ico';
+import { useState } from "react";
+import { Download, Mail, Linkedin, Github, MapPin, Globe, X } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const generateVCard = () => {
   const vcard = `BEGIN:VCARD
@@ -10,18 +9,18 @@ FN:Shivam Singh
 N:Singh;Shivam;;;
 TITLE:AI Engineer
 EMAIL;TYPE=INTERNET:shivam01511@gmail.com
+URL:https://shivamaiportfolio.lovable.app
 URL:https://github.com/leaderrr-shivam
 URL:https://www.linkedin.com/in/leaderrr-shivam
-URL:https://leaderrr-shivam.github.io/portfolio/
 ADR;TYPE=HOME:;;Rewa;Madhya Pradesh;;India
 NOTE:AI Engineer specializing in Machine Learning, Deep Learning, NLP, and OCR systems.
 END:VCARD`;
 
-  const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+  const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
   const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
+  const a = document.createElement("a");
   a.href = url;
-  a.download = 'Shivam_Singh.vcf';
+  a.download = "Shivam_Singh.vcf";
   a.click();
   URL.revokeObjectURL(url);
 };
@@ -44,26 +43,21 @@ const BusinessCard = () => {
 
           {/* 3D Flip Card */}
           <div
-            className="cursor-pointer mx-auto"
-            style={{ maxWidth: '420px', aspectRatio: '1.75/1', perspective: '1000px' }}
+            className="perspective-1000 cursor-pointer mx-auto"
+            style={{ maxWidth: "420px", aspectRatio: "1.75/1" }}
             onClick={() => setFlipped(!flipped)}
           >
             <div
-              className="relative w-full h-full transition-transform duration-700"
-              style={{
-                transformStyle: 'preserve-3d',
-                transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-              }}
+              className="relative w-full h-full transition-transform duration-700 preserve-3d"
+              style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
             >
               {/* Front */}
               <div
                 className="absolute inset-0 rounded-2xl p-7 flex flex-col justify-between overflow-hidden border border-border/30"
                 style={{
-                  backfaceVisibility: 'hidden',
-                  WebkitBackfaceVisibility: 'hidden',
-                  zIndex: flipped ? 0 : 1,
-                  background: 'var(--gradient-card)',
-                  boxShadow: 'var(--shadow-elevated), var(--shadow-glow)',
+                  backfaceVisibility: "hidden",
+                  background: "var(--gradient-card)",
+                  boxShadow: "var(--shadow-elevated), var(--shadow-glow)",
                 }}
               >
                 {/* Decorative corner accent */}
@@ -77,11 +71,7 @@ const BusinessCard = () => {
                     </h4>
                     <p className="text-xs text-primary font-medium tracking-wide mt-1">AI Engineer</p>
                   </div>
-                  <img
-                    src={faviconImg}
-                    alt="Logo"
-                    className="w-10 h-10 rounded-lg"
-                  />
+                  <img src="/favicon.ico" alt="Logo" className="w-10 h-10 rounded-lg opacity-80" />
                 </div>
 
                 <div className="flex items-center gap-4 relative z-10">
@@ -100,31 +90,38 @@ const BusinessCard = () => {
               <div
                 className="absolute inset-0 rounded-2xl p-7 flex flex-col justify-between overflow-hidden border border-border/30"
                 style={{
-                  backfaceVisibility: 'hidden',
-                  WebkitBackfaceVisibility: 'hidden',
-                  transform: 'rotateY(180deg)',
-                  zIndex: flipped ? 1 : 0,
-                  background: 'var(--gradient-card)',
-                  boxShadow: 'var(--shadow-elevated), var(--shadow-glow)',
+                  backfaceVisibility: "hidden",
+                  transform: "rotateY(180deg)",
+                  background: "var(--gradient-card)",
+                  boxShadow: "var(--shadow-elevated), var(--shadow-glow)",
                 }}
               >
-                <div className="absolute top-0 left-0 w-full h-1" style={{ background: 'var(--gradient-primary)' }} />
+                <div className="absolute top-0 left-0 w-full h-1" style={{ background: "var(--gradient-primary)" }} />
 
                 <div className="space-y-3 relative z-10 pt-2">
-                  <a href="mailto:shivam01511@gmail.com" onClick={(e) => e.stopPropagation()} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href="mailto:shivam01511@gmail.com"
+                    className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
                     <Mail size={14} className="text-primary" />
                     shivam01511@gmail.com
                   </a>
-                  <a href="https://www.linkedin.com/in/leaderrr-shivam" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href="https://www.linkedin.com/in/leaderrr-shivam"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
                     <Linkedin size={14} className="text-primary" />
                     linkedin.com/in/leaderrr-shivam
                   </a>
-                  <a href="https://github.com/leaderrr-shivam" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href="https://leaderrr-shivam.github.io/portfolio/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
                     <Github size={14} className="text-primary" />
-                    github.com/leaderrr-shivam
-                  </a>
-                  <a href="https://leaderrr-shivam.github.io/portfolio/" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <Globe size={14} className="text-primary" />
                     leaderrr-shivam.github.io/portfolio
                   </a>
                 </div>
