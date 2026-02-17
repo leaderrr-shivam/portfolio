@@ -6,7 +6,7 @@ const educationData = [
     specialization: 'Data Analytics (TCS iON)',
     institution: 'Amity University Online',
     period: 'July 2022 – July 2025',
-    cgpa: '8.31',
+    cgpa: '8.38',
     description: 'Fully online degree emphasizing discipline, self-management, and digital collaboration. Coursework includes data structures, algorithms, database management, and analytics.',
     current: false,
   },
@@ -25,7 +25,7 @@ const Education = () => {
     <section id="education" className="py-28 relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-card/50 via-transparent to-card/50" />
-      
+
       <div className="container mx-auto px-6 relative">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
@@ -46,7 +46,7 @@ const Education = () => {
                 {index < educationData.length - 1 && (
                   <div className="timeline-line" />
                 )}
-                
+
                 {/* Timeline dot */}
                 <div className="absolute left-0 top-2">
                   <div className={`timeline-dot ${edu.current ? 'animate-pulse-glow' : ''}`} />
@@ -76,7 +76,7 @@ const Education = () => {
                       </div>
                     )}
                   </div>
-                  
+
                   <p className="text-muted-foreground mb-2 ml-13">{edu.institution}</p>
                   <p className="text-sm text-muted-foreground/70 mb-4 font-mono ml-13">{edu.period}</p>
                   <p className="text-sm text-muted-foreground leading-relaxed ml-13">{edu.description}</p>
