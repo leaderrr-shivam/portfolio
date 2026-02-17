@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import BackToTop from '@/components/BackToTop';
+import { Helmet } from 'react-helmet-async';
 
 const blogPost = {
   title: 'The End of the Scaling Era — and What Replaces It',
@@ -180,8 +181,26 @@ const BlogPost = () => {
     }, 100);
   };
 
+
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{blogPost.title} | Shivam Singh</title>
+        <meta name="description" content={blogPost.excerpt} />
+        <meta name="keywords" content={blogPost.tags.join(', ')} />
+        <link rel="canonical" href={`https://leaderrr-shivam.github.io/portfolio/blog/the-end-of-the-scaling-era`} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={blogPost.title} />
+        <meta property="og:description" content={blogPost.excerpt} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://leaderrr-shivam.github.io/portfolio/blog/the-end-of-the-scaling-era`} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={blogPost.title} />
+        <meta name="twitter:description" content={blogPost.excerpt} />
+      </Helmet>
       <Navigation />
       <ScrollProgress />
       <main className="pt-28 pb-20" ref={sectionRef}>
