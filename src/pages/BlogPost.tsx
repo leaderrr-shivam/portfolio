@@ -183,7 +183,7 @@ const BlogPost = () => {
 
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Helmet>
         <title>{blogPost.title} | Shivam Singh</title>
         <meta name="description" content={blogPost.excerpt} />
