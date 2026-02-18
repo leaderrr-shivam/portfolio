@@ -23,6 +23,20 @@
   <meta name="ICBM" content="24.5362, 81.3037" />
 
   <link rel="canonical" href="https://leaderrr-shivam.github.io/portfolio/" />
+
+  <!-- GitHub Pages SPA redirect handler -->
+  <script>
+    (function(l) {
+      if (l.search[1] === 'p') {
+        var decoded = l.search.slice(1).split('&').map(function(s) {
+          return s.replace(/~and~/g, '&');
+        }).join('?');
+        window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + (decoded.charAt(0) === '?' ? '' : '/') + decoded + l.hash
+        );
+      }
+    }(window.location));
+  </script>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
   <!-- Open Graph / Facebook -->
