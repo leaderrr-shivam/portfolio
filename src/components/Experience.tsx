@@ -5,6 +5,20 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 const experienceData = [
   {
     role: 'AI Intern',
+    company: 'Infosys Springboard (Internship 6.0)',
+    period: 'Nov 2025 – Jan 2026',
+    type: 'Remote Internship',
+    project: 'Plant DocBot: AI-Enabled Plant Disease Diagnosis via Chat and Image Analysis',
+    certificate: `${import.meta.env.BASE_URL}certificates/Shivam_Singh_Infosys_Springboard_PlantDocBot_Certificate.jpg`,
+    highlights: [
+      'Built an AI-enabled plant disease diagnosis system combining chat and image analysis',
+      'Integrated computer vision models for leaf/plant disease classification',
+      'Developed conversational interface for guided diagnosis and care recommendations',
+      'Completed mandatory assignments under Infosys Springboard mentorship (B 8, 9 & 10)',
+    ],
+  },
+  {
+    role: 'AI Intern',
     company: 'TCS iON (RIO 210 Program)',
     period: 'Sep 2025 – Dec 2025',
     type: 'Remote Internship',
