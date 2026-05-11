@@ -12,7 +12,7 @@ interface ResumeModalProps {
   trigger: React.ReactNode;
 }
 
-const resumeUrl = `${import.meta.env.BASE_URL}Shivam_Singh_Resume_2026.pdf`;
+const resumeUrl = `${import.meta.env.BASE_URL}Shivam_Singh_Resume_May_2026.pdf`;
 
 const ResumeModal = ({ trigger }: ResumeModalProps) => {
   return (
