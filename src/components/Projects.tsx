@@ -93,7 +93,7 @@ const Projects = () => {
             {projectsData.map((project, index) => (
               <div
                 key={project.title}
-                className={`card-premium p-7 md:p-8 group ${project.featured ? 'lg:col-span-2' : ''}`}
+                className="card-premium p-7 md:p-8 group"
               >
                 <div className="flex items-start gap-5 mb-6">
                   <div className="icon-container w-14 h-14 flex-shrink-0">
