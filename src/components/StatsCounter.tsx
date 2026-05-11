@@ -6,7 +6,7 @@ const stats = [
   { icon: GitCommit, label: 'GitHub Contributions', value: 150, suffix: '+' },
   { icon: FolderKanban, label: 'Projects Completed', value: 8, suffix: '+' },
   { icon: Award, label: 'Certifications', value: 4, suffix: '' },
-  { icon: Briefcase, label: 'Internships', value: 3, suffix: '' },
+  { icon: Briefcase, label: 'Internships', value: 4, suffix: '' },
 ];
 
 const useCountUp = (target: number, duration = 2000) => {

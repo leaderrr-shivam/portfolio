@@ -15,7 +15,7 @@ const educationData = [
     degree: 'Credit-Linked Program in AI/ML',
     specialization: 'Applied Artificial Intelligence',
     institution: 'Daksh Gurukul, IIT Guwahati',
-    period: 'Mar 2025 – Mar 2026',
+    period: 'Mar 2025 – Jul 2026',
     description: 'Advanced program focusing on applied AI systems, machine learning methodologies, and industry-aligned learning with academic credits.',
     current: true,
   },
