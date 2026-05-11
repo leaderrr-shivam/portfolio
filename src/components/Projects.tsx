@@ -1,7 +1,20 @@
-import { Cpu, Eye, Brain, MessageSquare, Trophy } from 'lucide-react';
+import { Cpu, Eye, Brain, MessageSquare, Trophy, Leaf } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const projectsData = [
+  {
+    title: 'Plant DocBot – AI-Enabled Plant Disease Diagnosis',
+    type: 'Infosys Springboard Internship 6.0 Project',
+    icon: Leaf,
+    description: 'AI-powered assistant that diagnoses plant diseases through both natural-language chat and leaf image analysis, providing actionable care recommendations.',
+    highlights: [
+      'Combined computer vision and conversational AI in a single diagnosis workflow',
+      'Trained image classification model for common plant diseases',
+      'Built chat interface for symptom-based guided diagnosis',
+      'Delivered as part of Infosys Springboard mentored internship (B 8, 9 & 10)',
+    ],
+    technologies: ['Python', 'Computer Vision', 'CNN', 'NLP', 'Chatbot'],
+  },
   {
     title: 'Agentic AI: Exploring the Rise of Autonomous AI Agents',
     type: 'Final Year Research Project',
