@@ -182,24 +182,47 @@ const BlogPost = () => {
   };
 
 
+  const postUrl = 'https://leaderrr-shivam.github.io/portfolio/blog/the-end-of-the-scaling-era';
+  const ogImage = 'https://leaderrr-shivam.github.io/portfolio/og-image.png';
+  const shortTitle = 'The End of the Scaling Era | Shivam Singh';
+  const metaDesc = 'Why the scale-everything era of AI is ending — and the cultivation paradigm replacing it. By Shivam Singh.';
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: blogPost.title,
+    description: metaDesc,
+    datePublished: blogPost.date,
+    dateModified: blogPost.date,
+    author: { '@type': 'Person', name: 'Shivam Singh', url: 'https://leaderrr-shivam.github.io/portfolio/' },
+    image: ogImage,
+    mainEntityOfPage: postUrl,
+    keywords: blogPost.tags.join(', '),
+  };
+
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Helmet>
-        <title>{blogPost.title} | Shivam Singh</title>
-        <meta name="description" content={blogPost.excerpt} />
+        <title>{shortTitle}</title>
+        <meta name="description" content={metaDesc} />
         <meta name="keywords" content={blogPost.tags.join(', ')} />
-        <link rel="canonical" href={`https://leaderrr-shivam.github.io/portfolio/blog/the-end-of-the-scaling-era`} />
+        <link rel="canonical" href={postUrl} />
 
         {/* Open Graph */}
-        <meta property="og:title" content={blogPost.title} />
-        <meta property="og:description" content={blogPost.excerpt} />
+        <meta property="og:title" content={shortTitle} />
+        <meta property="og:description" content={metaDesc} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://leaderrr-shivam.github.io/portfolio/blog/the-end-of-the-scaling-era`} />
+        <meta property="og:url" content={postUrl} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="article:published_time" content={blogPost.date} />
+        <meta property="article:author" content="Shivam Singh" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={blogPost.title} />
-        <meta name="twitter:description" content={blogPost.excerpt} />
+        <meta name="twitter:title" content={shortTitle} />
+        <meta name="twitter:description" content={metaDesc} />
+        <meta name="twitter:image" content={ogImage} />
+
+        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
       <Navigation />
       <ScrollProgress />
