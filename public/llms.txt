@@ -1,0 +1,19 @@
+# Shivam Singh — AI/ML Engineer Portfolio
+
+> Portfolio of Shivam Singh, an AI/ML Engineer specializing in machine learning, deep learning, NLP, OCR, and autonomous agents. Remote-first, based in Rewa, India.
+
+Shivam is a remote-ready AI/ML Engineer with hands-on experience building LLM-powered systems, RAG pipelines, computer vision, and OCR solutions. The site showcases his work, experience, certifications, education, and writing on AI strategy.
+
+## Pages
+
+- [Home](/): Overview, about, stats, education, experience, projects, skills, credentials, blog, GitHub activity, and contact.
+- [Resume (PDF)](/Shivam_Singh_Resume_May_2026.pdf): Latest resume — May 2026.
+
+## Blog
+
+- [The End of the Scaling Era — and What Replaces It](/blog/the-end-of-the-scaling-era): Why the scale-everything paradigm in AI is ending, and the cultivation paradigm — test-time compute, post-training specialization, MoE — that replaces it.
+
+## Optional
+
+- [GitHub](https://github.com/leaderrr-shivam)
+- [LinkedIn](https://www.linkedin.com/in/leaderrr-shivam)
