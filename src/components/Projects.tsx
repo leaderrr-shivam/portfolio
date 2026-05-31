@@ -81,9 +81,9 @@ const Projects = () => {
             <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Technical Portfolio
             </span>
-            <h3 className="text-3xl md:text-5xl font-display font-bold mb-5">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-5">
               Projects
-            </h3>
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Research-driven projects and industry internship deliverables demonstrating end-to-end ML implementation
             </p>

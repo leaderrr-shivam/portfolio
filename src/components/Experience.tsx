@@ -85,9 +85,9 @@ const Experience = () => {
             <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Professional Journey
             </span>
-            <h3 className="text-3xl md:text-5xl font-display font-bold mb-5">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-5">
               Experience
-            </h3>
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Remote-first professional experience through industry-backed programs and freelance work
             </p>
