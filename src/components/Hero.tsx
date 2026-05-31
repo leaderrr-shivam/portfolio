@@ -34,6 +34,7 @@ const Hero = () => {
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 opacity-0 animate-fade-in-up delay-100">
             <span className="text-gradient font-display tracking-tight">Shivam Singh</span>
+            <span className="sr-only"> — AI/ML Engineer Portfolio</span>
           </h1>
 
           <h2 className="text-xl md:text-2xl font-medium text-muted-foreground mb-8 opacity-0 animate-fade-in-up delay-200">
