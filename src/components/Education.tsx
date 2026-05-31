@@ -34,9 +34,9 @@ const Education = () => {
             <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Academic Background
             </span>
-            <h3 className="text-3xl md:text-5xl font-display font-bold">
+            <h2 className="text-3xl md:text-5xl font-display font-bold">
               Education
-            </h3>
+            </h2>
           </div>
 
           <div className="relative">

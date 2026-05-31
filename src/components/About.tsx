@@ -39,9 +39,9 @@ const About = () => {
             <span className="inline-block px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-[0.2em] bg-primary/10 rounded-full mb-4">
               Professional Summary
             </span>
-            <h3 className="text-3xl md:text-5xl font-display font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
               Building <span className="text-gradient-warm">Intelligent</span> Systems
-            </h3>
+            </h2>
           </div>
 
           {/* Summary text */}
