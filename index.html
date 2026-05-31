@@ -24,9 +24,17 @@
 
   <link rel="canonical" href="https://leaderrr-shivam.github.io/portfolio/" />
 
-  <!-- GitHub Pages SPA redirect handler -->
+  <!-- GitHub Pages SPA redirect handler + canonical host redirect -->
   <script type="text/javascript">
     (function(l) {
+      // Redirect non-canonical hosts (e.g. lovable.app preview/published) to the canonical GitHub Pages URL.
+      var canonicalHost = 'leaderrr-shivam.github.io';
+      var canonicalBase = 'https://leaderrr-shivam.github.io/portfolio';
+      if (l.hostname !== canonicalHost && l.hostname !== 'localhost' && l.hostname !== '127.0.0.1') {
+        var path = l.pathname.replace(/^\/+/, '');
+        window.location.replace(canonicalBase + (path ? '/' + path : '/') + l.search + l.hash);
+        return;
+      }
       if (l.search[1] === '/') {
         var decoded = l.search.slice(1).split('&').map(function(s) {
           return s.replace(/~and~/g, '&');
