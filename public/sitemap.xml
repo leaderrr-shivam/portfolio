@@ -2,24 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://shivamaiportfolio.lovable.app/</loc>
+    <loc>https://leaderrr-shivam.github.io/portfolio/</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://shivamaiportfolio.lovable.app/og-image.png</image:loc>
+      <image:loc>https://leaderrr-shivam.github.io/portfolio/og-image.png</image:loc>
       <image:title>Shivam Singh Portfolio - AI Engineer</image:title>
       <image:caption>Portfolio of Shivam Singh, AI Engineer specializing in Machine Learning and Deep Learning.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://shivamaiportfolio.lovable.app/blog/the-end-of-the-scaling-era</loc>
+    <loc>https://leaderrr-shivam.github.io/portfolio/blog/the-end-of-the-scaling-era</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://shivamaiportfolio.lovable.app/Shivam_Singh_Resume_May_2026.pdf</loc>
+    <loc>https://leaderrr-shivam.github.io/portfolio/Shivam_Singh_Resume_May_2026.pdf</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
